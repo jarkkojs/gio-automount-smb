@@ -1,0 +1,10 @@
+[Unit]
+Description=Automount Samba shares with GIO
+Requires=gio-automount-smb.service
+
+[Timer]
+Unit=gio-automount-smb.service
+OnCalendar=*-*-* *:0/15:0
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=Automount Samba shares with GIO
+Wants=gio-automount-smb.timer
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/gio-automount-smb
+
+[Install]
+WantedBy=default.target
